@@ -14,7 +14,7 @@ function List(props){
         })
     } else {
         items = props.content.map(item => {
-        return <li>{item.ingredient} - {item.amount}</li>
+        return <li key={item._id}>{item.ingredient} - {item.amount}</li>
         })
     }
     

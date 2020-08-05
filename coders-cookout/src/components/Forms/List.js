@@ -1,14 +1,11 @@
 import React from 'react'
 import "./Forms.css"
-/*
-function handleOnChange(){
-    console.log("called on change function!")
-}
-*/
-function List(props){
 
-    console.log(props)  
+function List(props){
+    console.log("Hello from List") 
+    console.log(props.content[0])  
     let items = []
+    
     if(props.type === "checkbox"){
         items = props.content.map(item => {
         return <div>
@@ -17,10 +14,10 @@ function List(props){
         })
     } else {
         items = props.content.map(item => {
-        return <li>{item}</li>
+        return <li>{item.ingredient} - {item.amount}</li>
         })
     }
-
+    
     return (
         <div>
             {items}
@@ -29,3 +26,4 @@ function List(props){
 }
 
 export default List
+

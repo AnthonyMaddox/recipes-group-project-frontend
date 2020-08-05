@@ -23,7 +23,7 @@ class RecipeOfDay extends Component {
         picture: data[0].picture,
         title: data[0].title,
         description: data[0].description,
-        ingredients: data[0].ingredients,
+        ingredients: data.ingredient,
         instructions: data[0].instructions,
       });
       console.log("Data has been received");
@@ -37,9 +37,11 @@ class RecipeOfDay extends Component {
         <img src={this.state.picture} />
         <h3>{this.state.title}</h3>
         <p>{this.state.description}</p>
-        {/* <ul>
-          {ingredients.map(ingredients => <li>{this.state.ingredients}</li>
-        </ul> */}
+        <ul>
+          {(this.state.ingredients || []).map((ingredient) => (
+            <li key={ingredient}>{ingredient}</li>
+          ))}
+        </ul>
         <p>{this.state.instructions}</p>
       </div>
     );

@@ -9,7 +9,7 @@ function List(props){
     if(props.type === "checkbox"){
         items = props.content.map(item => {
         return <div>
-                <input type="checkbox"/><p>{item}</p>
+                <input type="checkbox"/><label>{item.ingredient}</label>
                 </div>
         })
     } else {

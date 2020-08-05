@@ -27,7 +27,7 @@ const Styles = styled.div`
     margin: 0.3em 0em 0em 1.2em;
   }
   input {
-    margin-left: 80em;
+    margin-left: 70%;
     height: 2.3em;
     width: 20em;
     margin-top: 1.7em;

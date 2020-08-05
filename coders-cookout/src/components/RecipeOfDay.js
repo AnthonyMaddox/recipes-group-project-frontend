@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./RecipeOfDay.css";
 
 class RecipeOfDay extends Component {
   constructor(props) {
@@ -31,7 +32,8 @@ class RecipeOfDay extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
+        <h2>Recipe of The Day</h2>
         <img src={this.state.picture} />
         <h3>{this.state.title}</h3>
         <p>{this.state.description}</p>

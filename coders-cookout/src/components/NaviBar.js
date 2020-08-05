@@ -20,11 +20,11 @@ const Styles = styled.div`
     }
   }
   .navbar-brand {
-    font-size: 2em;
+    font-size: 2.5em;
     color: white;
     position: absolute;
     font-family: "Orbitron", sans-serif;
-    margin: 0.7em 0em 0em 1.5em;
+    margin: 0.3em 0em 0em 1.2em;
   }
   input {
     margin-left: 80em;

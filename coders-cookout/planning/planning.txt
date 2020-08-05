@@ -1,1 +1,24 @@
 ## Story Book Components
+
+Components
+1) Nav
+2) Picture - small
+3) Picture - large
+4) Picture - skinny
+5) Search
+6) Button - Get Recipe
+7) Link - Login
+8) Link - Edit
+Form 
+User
+Recipie
+Ingredient
+
+Routes
+Home
+
+
+
+
+
+

@@ -11,5 +11,5 @@ const style = {
 }
 
 storiesOf("Image", module).add("Primary Large", () => (
-    <Image src="https://images.unsplash.com/photo-1568901839119-631418a3910d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+    <Image type="large" src="https://images.unsplash.com/photo-1568901839119-631418a3910d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
 ))

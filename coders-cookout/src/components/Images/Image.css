@@ -2,3 +2,13 @@
     width: 200px;
     height:200px;
 }
+
+.medium {
+    width: 100px;
+    height:100px;
+}
+
+.skinny {
+    width: 200px;
+    height:100px;
+}

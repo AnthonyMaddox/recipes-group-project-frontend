@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import { NaviBar } from "./components/NaviBar";
-import RecipeOfDay from "./components/RecipeOfDay";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
         <main>
           <Route path="/" component={Home} />
         </main>
-        <RecipeOfDay />
       </div>
     </Router>
   );

@@ -16,6 +16,10 @@ Ingredient
 
 Routes
 Home
+Form - drop down menu of either CRU recipes
+User
+App/recipes => all recipes
+
 
 
 

@@ -38,9 +38,7 @@ class RecipeOfDay extends Component {
         <img src={this.state.picture} />
         <h3>{this.state.title}</h3>
         <p>{this.state.description}</p>
-        <ul>
-          <List content={this.state.ingredients} />
-        </ul>
+        
         <p>{this.state.instructions}</p>
       </div>
     );

@@ -1,0 +1,24 @@
+.container {
+  border: solid 2px;
+  border-color: rgb(218, 213, 213);
+  width: 20%;
+  height: 80%;
+  background-color: #e9f2e9;
+  padding-left: 1.5em;
+  margin: 1em;
+}
+img {
+  width: 25%;
+  height: 25%;
+  margin-left: 25%;
+}
+h2,
+h3 {
+  margin-left: 20%;
+  color: #707070;
+  margin-left: 15%;
+}
+p {
+  color: #707070;
+  font-weight: bold;
+}

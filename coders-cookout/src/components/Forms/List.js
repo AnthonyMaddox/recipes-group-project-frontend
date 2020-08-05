@@ -7,9 +7,12 @@ function handleOnChange(){
 */
 function List(props){
     console.log(props)
+    const items = props.content.map(item => {
+        return <li>{item}</li>
+    })
     return (
-        <div className="list-item">
-            <li>{props.item.text}</li>
+        <div>
+            {items}
         </div>        
     );
 }

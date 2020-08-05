@@ -7,3 +7,7 @@ const ingredients = ["Milk", "Sugar", "Flour"]
 storiesOf("List", module).add("List", () => (
   <List content={ingredients}/>
 ))
+
+storiesOf("List", module).add("List Checkbox", () => (
+    <List type="checkbox" content={ingredients}/>
+))

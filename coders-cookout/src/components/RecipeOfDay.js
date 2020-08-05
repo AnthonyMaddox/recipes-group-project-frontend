@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./RecipeOfDay.css";
-import List from "./Forms/List";
+// import List from "./Forms/List";
 
 class RecipeOfDay extends Component {
   constructor(props) {
@@ -33,14 +33,12 @@ class RecipeOfDay extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="recipeOfDay item">
         <h2>Recipe of The Day</h2>
         <img src={this.state.picture} />
         <h3>{this.state.title}</h3>
         <p>{this.state.description}</p>
-        <ul>
-          <List content={this.state.ingredients} />
-        </ul>
+        <ul>{/* <List content={this.state.ingredients} /> */}</ul>
         <p>{this.state.instructions}</p>
       </div>
     );

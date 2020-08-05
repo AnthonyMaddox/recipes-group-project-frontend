@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+:root {
+  --color: #f6f8fa;
+}
+
+p {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.input {
+  color: var(--color);
+  width: 20em;
+  height: 2.5em;
+  padding-left: 1em;
+  font-family: "Source Sans Pro", sans-serif;
+  opacity: 0.6;
+}
+.input-medium {
+  height: 3em;
+  font-size: 1em;
+}
+
+.input-large {
+  height: 3.5em;
+  font-size: 1.2em;
+}

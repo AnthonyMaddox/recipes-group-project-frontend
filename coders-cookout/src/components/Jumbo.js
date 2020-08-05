@@ -1,18 +1,39 @@
-import React from "react";
-import { Jumbotron } from "react-bootstrap";
-import Image from "./Images/Image";
+import React, { Component } from "react";
+import axios from "axios";
+import "./Jumbo.css";
 
-const Jumbo = () => {
-  return (
-    <Jumbotron>
-      <Image src="./Assets/GrilledSalmon.jpeg"></Image>
+class Jumbo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      picture: "",
+      title: "",
+      description: "",
+    };
+  }
 
-      <p>
-        This is a simple hero unit, a simple jumbotron-style component for
-        calling extra attention to featured content or information.
-      </p>
-    </Jumbotron>
-  );
-};
+  componentDidMount() {
+    axios.get("https://coders-cookout.herokuapp.com/recipes").then((res) => {
+      const data = res.data;
+
+      this.setState({
+        picture: data[5].picture,
+        title: data[5].title,
+        description: data[5].description,
+      });
+      console.log("Data has been received");
+    });
+  }
+
+  render() {
+    return (
+      <div className="jumbo item">
+        <img src={this.state.picture} />
+        <h3>{this.state.title}</h3>
+        <p>{this.state.description}</p>
+      </div>
+    );
+  }
+}
 
 export default Jumbo;

@@ -8,9 +8,9 @@ import "./Home.css";
 
 function Home() {
   return (
-    <div>
+    <div classNam="container">
       <RecipeOfDay />
-      <Jumbo />
+      {/* <Jumbo /> */}
     </div>
     
   );

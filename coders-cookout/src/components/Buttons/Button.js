@@ -2,9 +2,9 @@ import React from "react";
 import "./Button.css";
 
 const Button = (props) => {
-    let classList = [];
+  console.log(props.style)
   return (
-      <button className={classList.join(" ")}>
+      <button style={props.style}>
         {props.label}
       </button>
     );

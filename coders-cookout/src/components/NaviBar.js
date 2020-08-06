@@ -54,7 +54,7 @@ export const NaviBar = () => (
         </Nav.Item>
         <Nav.Item>
           <Nav.Link>
-            <Link to="/formsPage">Create Recipe</Link>
+            <Link to="/formPage">Create Recipe</Link>
           </Nav.Link>
         </Nav.Item>
       </Navbar.Collapse>

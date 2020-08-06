@@ -1,32 +1,80 @@
 .createForm {
-   width: 80vw;
-   display: flex;
-   justify-content: space-around;
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
 }
 .createFormTitle {
-   font-family: "Orbitron", sans-serif;
-   text-align: center;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
 }
 .addRecipeDiv {
   display: flex;
   flex-direction: column;
 }
-.bigButton {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-top: 30px;
+.ingredientForm {
+  display: none;
 }
-p {
-   margin: 0;
+.bigButton {
+  margin: 0;
+}
+.deleteButton {
+  display: flex;
+  justify-content: center;
+}
+.createRecipeButton {
+  width: 200px;
+  padding: 5px 5px 50px 5px;
+  background-color: #de6c6d;
+  display: flex;
+  color: white;
+}
+.updateRecipeButton {
+  width: 100px;
+  padding: 5px 5px 50px 5px;
+  background-color: #de6c6d;
+  display: flex;
+  color: white;
 }
 .idField {
-   margin: -10px 0 20px 0;
-   display: flex;
-   justify-content: center;
+  margin: -10px 0 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.inputLabel {
+  margin-bottom: 0;
 }
 .subtitle {
-   font-size: 10px;
-   margin-top: 10px;
-   margin-left: -25px;
+  font-size: 10px;
+  margin: 10px 0 0 -15px;
+}
+/*form page*/
+
+.addDiv {
+  display: none;
+}
+.addBtn {
+  height: 50px;
+  width: 200px;
+  padding: 10px 25px;
+  border: none;
+}
+.updateDiv {
+  display: none;
+}
+.deleteDiv {
+  display: none;
+}
+.crudDiv {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.display {
+  display: block;
+}
+.formButton {
+  padding: 5px 80px 50px 5px;
+  background-color: #de6c6d;
+  display: flex;
+  color: white;
 }

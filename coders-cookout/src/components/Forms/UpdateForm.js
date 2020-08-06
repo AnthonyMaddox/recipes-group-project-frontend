@@ -18,7 +18,7 @@ class UpdateForm extends Component {
 
   render() {
     return (
-      <div>
+      <form>
         <h4 className="createFormTitle">Update A Recipe By ID</h4>
         <div className="idField">
           <p>ID:</p>
@@ -26,32 +26,28 @@ class UpdateForm extends Component {
             id="createTitle"
             className={classList.join(" ")}
             type="text"
-            value={this.state.value}
-            placeholder={this.state.placeholder}
           />
         </div>
         <div id="createForm" className="createForm">
           <div className="addRecipeDiv">
             <div>
-              <p>Title:</p>
+              <p className ="inputLabel">Title:</p>
               <input
                 id="createTitle"
                 className={classList.join(" ")}
                 type="text"
-                value={this.state.value}
-                placeholder={this.state.placeholder}
               />
             </div>
             <div>
-              <p>Description:</p>
+              <p className ="inputLabel">Description:</p>
               <textarea />
             </div>
             <div>
-              <p>Instructions:</p>
+              <p className ="inputLabel">Instructions:</p>
               <textarea />
             </div>
             <div>
-              <p>Image URL Link:</p>
+              <p className ="inputLabel">Image URL Link:</p>
               <input
                 id="textField"
                 className={classList.join(" ")}
@@ -59,7 +55,7 @@ class UpdateForm extends Component {
               />
             </div>
             <div>
-              <p>Cook:</p>
+              <p className ="inputLabel">Cook:</p>
               <input
                 id="textField"
                 className={classList.join(" ")}
@@ -78,7 +74,7 @@ class UpdateForm extends Component {
               />
             </div>
             <div>
-              <p>Amount:</p>
+              <p className ="inputLabel">Amount:</p>
               <input
                 id="addAmount"
                 className={classList.join(" ")}
@@ -86,11 +82,11 @@ class UpdateForm extends Component {
               />
             </div>
             <div>
-              <button>Add Ingredient</button>
+              <button className="formButton">Add Ingredient</button>
             </div>
             <div>
             <p className="subtitle">Delete Ingredient</p>
-              <p>Ingredient:</p>
+              <p className ="inputLabel">Ingredient:</p>
               <input
                 id="addIngredient"
                 className={classList.join(" ")}
@@ -106,15 +102,15 @@ class UpdateForm extends Component {
               />
             </div>
             <div>
-              <button>Delete Ingredient</button>
+              <button className="formButton">Delete Ingredient</button>
             </div>
           </div>
         </div>
         <div className="bigButton">
           <br></br>
-          <button>Update Recipe</button>
+          <button className="formButton">Update Recipe</button>
         </div>
-      </div>
+      </form>
     );
   }
 }

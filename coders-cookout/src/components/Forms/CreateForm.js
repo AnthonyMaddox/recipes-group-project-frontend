@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import "./Form.css";
-/*let types = ["IWB", "TextField"];
-   if (types.includes(props.type)) {
-     classList.push(`IWB-${props.type}`);
-   }*/
-//need to use e.target.value and set state
-// convert to a class!!! set state and include something to hold the value of input.value
+import axios from "axios";
+
 let classList = [];
 class CreateForm extends Component {
   constructor(props) {
@@ -15,22 +11,34 @@ class CreateForm extends Component {
       value: "",
     };
   }
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log("help im posting");
+    let title = document.getElementById("createTitle").value;
+    console.log(title);
+    let res = "https://coders-cookout.herokuapp.com/recipes";
+    //  let state = document.getElementById("state").value;
+    //  let district = document.getElementById("district").value;
+    //  console.log(city);
+
+    axios
+      .post(res, {
+        title: title,
+      })
+      .then(function (res) {
+        console.log(res);
+      });
+  }
 
   render() {
     return (
-      <div>
+      <form onSubmit={this.handleSubmit}>
         <h4 className="createFormTitle">Add A New Recipe!</h4>
         <div id="createForm" className="createForm">
           <div className="addRecipeDiv">
             <div>
               <p>Title:</p>
-              <input
-                id="createTitle"
-                className={classList.join(" ")}
-                type="text"
-                value={this.state.value}
-                placeholder={this.state.placeholder}
-              />
+              <input id="createTitle" type="text" />
             </div>
             <div>
               <p>Description:</p>
@@ -46,8 +54,6 @@ class CreateForm extends Component {
                 id="textField"
                 className={classList.join(" ")}
                 type="text"
-                value={this.state.value}
-                placeholder={this.state.placeholder}
               />
             </div>
             <div>
@@ -56,8 +62,6 @@ class CreateForm extends Component {
                 id="textField"
                 className={classList.join(" ")}
                 type="text"
-                value={this.state.value}
-                placeholder={this.state.placeholder}
               />
             </div>
           </div>
@@ -69,8 +73,6 @@ class CreateForm extends Component {
                 id="addIngredient"
                 className={classList.join(" ")}
                 type="text"
-                value={this.state.value}
-                placeholder={this.state.placeholder}
               />
             </div>
             <div>
@@ -79,12 +81,10 @@ class CreateForm extends Component {
                 id="addAmount"
                 className={classList.join(" ")}
                 type="text"
-                value={this.state.value}
-                placeholder={this.state.placeholder}
               />
             </div>
             <div>
-              <button>Add Ingredient</button>
+              <button className="formButton">Add Ingredient</button>
             </div>
             <div>
               <p className="subtitle">Delete Ingredient</p>
@@ -104,15 +104,15 @@ class CreateForm extends Component {
               />
             </div>
             <div>
-              <button>Add Ingredient</button>
+              <button className="formButton">Delete Ingredient</button>
             </div>
           </div>
         </div>
         <div className="bigButton">
           <br></br>
-          <button>Create Recipe</button>
+          <button className="formButton">Create Recipe</button>
         </div>
-      </div>
+      </form>
     );
   }
 }

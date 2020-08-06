@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Form.css";
+import axios from "axios";
 /*let types = ["IWB", "TextField"];
    if (types.includes(props.type)) {
      classList.push(`IWB-${props.type}`);
@@ -10,31 +11,36 @@ let classList = [];
 class DeleteForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      placeholder: "",
-      value: "",
-    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log("oh no I'm deleting");
+    let idInput = document.getElementById("idInput").value;
+    console.log(idInput);
+
+    let res = `https://coders-cookout.herokuapp.com/${idInput}`;
+    console.log(res);
+
+    axios.delete(res).then((res) => {
+      console.log(res);
+      console.log(res.data);
+    });
   }
 
   render() {
     return (
-      <div>
+      <form onSubmit={this.handleSubmit}>
         <h4 className="createFormTitle">Delete A Recipe By ID</h4>
         <div className="idField">
           <p>ID:</p>
-          <input
-            id="createTitle"
-            className={classList.join(" ")}
-            type="text"
-            value={this.state.value}
-            placeholder={this.state.placeholder}
-          />
+          <input id="idInput" type="text" />
         </div>
         <div className="bigButton">
           <br></br>
-          <button>Delete Recipe</button>
+          <button className="formButton">Delete Recipe</button>
         </div>
-      </div>
+      </form>
     );
   }
 }

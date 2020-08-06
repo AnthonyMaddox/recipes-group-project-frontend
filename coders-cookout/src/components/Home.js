@@ -5,14 +5,20 @@ import "./Images/Image.css";
 import Jumbo from "./Jumbo";
 import RecipeOfDay from "./RecipeOfDay";
 import "./Home.css";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Home() {
   return (
-    <div classNam="container">
-      <RecipeOfDay />
-      {/* <Jumbo /> */}
+    <div>
+      <Row>
+        <Col>
+          <RecipeOfDay />
+        </Col>
+        <Col>
+          <Jumbo />
+        </Col>
+      </Row>
     </div>
-    
   );
 }
 

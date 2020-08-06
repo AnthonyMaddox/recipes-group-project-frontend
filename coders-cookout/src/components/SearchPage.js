@@ -5,16 +5,20 @@ import "./SearchPage.css";
 class SearchPage extends Component {
   state = {
     searchValue: "",
+    recipes: [],
   };
   handleOnChange = (event) => {
     this.setState({ searchValue: event.target.value });
   };
-  handleSearch = () => {};
+  handleSearch = () => {
+    this.getData(this.state.searchValue);
+  };
 
   getData = (searchInput) => {
     axios.get("https://coders-cookout.herokuapp.com/recipes").then((res) => {
       const data = res.data;
       console.log(data);
+      this.setState({ recipes: data });
     });
   };
 
@@ -29,6 +33,18 @@ class SearchPage extends Component {
           value={this.state.searchValue}
         />
         <button onClick={this.handleSearch}>Search</button>
+        {this.state.recipes ? (
+          <div>
+            {this.state.recipes.map((recipe, index) => (
+              <div key={index}>
+                <h1>{recipe.strRecipe}</h1>
+                <img src={recipe.picture} alt="recipe-thumb" />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p>Try searching for a Recipe</p>
+        )}
       </div>
     );
   }

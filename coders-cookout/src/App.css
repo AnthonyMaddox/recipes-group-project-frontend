@@ -1,5 +1,9 @@
-.homeDiv{
-  height: 200px;
-  width: 200px;
-  border: 2px solid black;
+.formLink {
+   text-decoration: none;
+   color: black;
+}
+.formPageBody {
+   height: 100vh;
+   width: 100vw;
+   background-color: pink;
 }

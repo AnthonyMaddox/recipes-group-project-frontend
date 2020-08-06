@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 import Search from "../components/Search/Search";
@@ -29,7 +29,10 @@ const Styles = styled.div`
   input {
     height: 2.3em;
     width: 20em;
-    margin-top: 1.7em;
+    margin-top: 0.7em;
+  }
+  Nav.Link {
+    background-color: white;
   }
 `;
 
@@ -39,8 +42,22 @@ export const NaviBar = () => (
       <Navbar.Brand href="/">Coder Cook-Off</Navbar.Brand>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto"></Nav>
+        <Nav.Item>
+          <Nav.Link>
+            <Link to="/home">Home</Link>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link>
+            <Link to="/search">Search</Link>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link>
+            <Link to="/formsPage">Create Recipe</Link>
+          </Nav.Link>
+        </Nav.Item>
       </Navbar.Collapse>
-      <Search />
     </Navbar>
   </Styles>
 );

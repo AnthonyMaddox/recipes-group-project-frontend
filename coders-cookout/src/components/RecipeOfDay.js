@@ -37,7 +37,10 @@ class RecipeOfDay extends Component {
         <div className="content">
           <div className="recipeOfDay item">
             <h2>Recipe of The Day</h2>
-            <img className="recipeOfDay-img" src={this.state.picture} />
+            <img
+              className="recipeOfDay-img img-fluid"
+              src={this.state.picture}
+            />
             <h3>{this.state.title}</h3>
             <p>{this.state.description}</p>
             <ul>

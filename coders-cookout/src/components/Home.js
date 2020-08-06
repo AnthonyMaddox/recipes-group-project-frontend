@@ -5,7 +5,7 @@ import "./Images/Image.css";
 import Jumbo from "./Jumbo";
 import RecipeOfDay from "./RecipeOfDay";
 import "./Home.css";
-import { Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import ImagesColumn from "./ImagesColumn";
 
 function Home() {
@@ -23,7 +23,6 @@ function Home() {
         </Col>
       </Row>
     </div>
-    
   );
 }
 

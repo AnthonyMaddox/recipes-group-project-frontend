@@ -17,6 +17,7 @@
   width: 35%;
   height: 30%;
   margin-left: 25%;
+  object-fit: cover;
 }
 p {
   padding-right: 1em;

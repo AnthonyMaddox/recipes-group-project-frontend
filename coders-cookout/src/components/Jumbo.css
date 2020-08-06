@@ -1,6 +1,6 @@
 .jumboBlock {
   width: 90%;
-  padding: 1rem;
+  padding: 3rem;
   height: 50vw;
   position: relative;
   border: solid lightgray;
@@ -12,17 +12,23 @@
   color: #707070;
 }
 .jumboPic {
-  width: 100%;
+  width: 80%;
   height: 90%;
+  object-fit: cover;
+  margin-left: 9%;
+  padding-top: 2%;
 }
-Button {
-  height: 1.5em;
-  width: 4em;
-  margin-left: 2em;
+button {
+  height: 2em;
+  width: 7em;
+  position: relative;
+  margin-left: 35%;
 }
 p {
-  padding-left: 1em;
+  padding-left: 17%;
+  font-weight: bold;
 }
 .h3Jumbo {
   margin-top: -0.5em;
+  margin-left: 17%;
 }

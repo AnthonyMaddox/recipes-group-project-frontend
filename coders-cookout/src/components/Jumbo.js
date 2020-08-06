@@ -32,9 +32,10 @@ class Jumbo extends Component {
         <div className="jumboContent">
           <div className="jumbo item1">
             <img className="jumboPic" src={this.state.picture} />
+            <hr></hr>
             <h3 className="h3Jumbo">{this.state.title}</h3>
             <p className="pJumbo">{this.state.description}</p>
-            <Button />
+            <button>Get Recipe</button>
           </div>
         </div>
       </div>

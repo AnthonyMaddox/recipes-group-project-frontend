@@ -7,11 +7,13 @@ class UpdateForm extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+
     this.state = {
       placeholder: "",
       value: "",
     };
   }
+
   handleSubmit(e) {
     e.preventDefault();
     console.log("yikes im updating");
@@ -77,10 +79,12 @@ class UpdateForm extends Component {
               className={classList.join(" ")}
               type="text"
             />
+
           </div>
         </div>
         <div className="bigButton">
           <br></br>
+
           <button className="updateRecipeButton">Update Recipe</button>
         </div>
       </div>

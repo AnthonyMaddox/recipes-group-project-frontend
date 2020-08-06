@@ -7,13 +7,13 @@ class NavBar extends Component {
 
     return (
         <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/" className="navbar-brand">Coders Cookout</Link>
+        <Link to="/home" className="navbar-brand">Coders Cookout</Link>
         <div className="collapse navbar-collapse">
             <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                <Link to="/" className="nav-link">Sign Up</Link>
-                <Link to="/" className="nav-link">Log in</Link>
-                <Link to="/" className="nav-link">Log Out</Link>
+                <Link to="/signup" className="nav-link">Sign Up</Link>
+                <Link to="/login" className="nav-link">Log in</Link>
+                <Link to="/logout" className="nav-link">Log Out</Link>
                 </li>            
             </ul>
         </div>

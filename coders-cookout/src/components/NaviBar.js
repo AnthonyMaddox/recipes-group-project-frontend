@@ -57,6 +57,11 @@ export const NaviBar = () => (
             <Link to="/formsPage">Create Recipe</Link>
           </Nav.Link>
         </Nav.Item>
+        <Nav.Item>
+          <Nav.Link>
+            <Link to="/user">Sign In</Link>
+          </Nav.Link>
+        </Nav.Item>
       </Navbar.Collapse>
     </Navbar>
   </Styles>

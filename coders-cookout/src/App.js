@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import { NaviBar } from "./components/NaviBar";
 import FormPage from "./components/FormPage";
 import SearchPage from "./components/SearchPage";
+import User from "./components/Authentication/Auth";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/formpage" component={FormPage} exact={true} />
           <Route path="/" render={() => <Redirect to="/home" />} />
           <Route path="/search" component={SearchPage} />
+          <Route path="/user" component={User} />
         </main>
       </div>
     </Router>

@@ -19,7 +19,7 @@ class DeleteForm extends Component {
     let idInput = document.getElementById("idInput").value;
     console.log(idInput);
 
-    let res = `https://coders-cookout.herokuapp.com/${idInput}`;
+    let res = `https://coders-cookout.herokuapp.com/recipes/${idInput}`;
     console.log(res);
 
     axios.delete(res).then((res) => {

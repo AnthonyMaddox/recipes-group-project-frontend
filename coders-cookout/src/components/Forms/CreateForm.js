@@ -15,18 +15,23 @@ class CreateForm extends Component {
     e.preventDefault();
     console.log("help im posting");
     let title = document.getElementById("createTitle").value;
+    let description = document.getElementById("createDescription").value;
+    let instructions = document.getElementById("createInstructions").value;
+    let picture = document.getElementById("createPicture").value;
+    let cook = document.getElementById("createCook").value;
     console.log(title);
-    let res = "https://coders-cookout.herokuapp.com/recipes";
-    //  let state = document.getElementById("state").value;
-    //  let district = document.getElementById("district").value;
-    //  console.log(city);
 
+    let res = "https://coders-cookout.herokuapp.com/recipes";
     axios
       .post(res, {
         title: title,
+        description: description,
+        instructions: instructions,
+        picture: picture,
+        cook: cook,
       })
       .then(function (res) {
-        console.log(res);
+        console.log(res.data);
       });
   }
 
@@ -37,29 +42,29 @@ class CreateForm extends Component {
         <div id="createForm" className="createForm">
           <div className="addRecipeDiv">
             <div>
-              <p>Title:</p>
+              <p className ="inputLabel">Title:</p>
               <input id="createTitle" type="text" />
             </div>
             <div>
-              <p>Description:</p>
-              <textarea />
+              <p className ="inputLabel">Description:</p>
+              <textarea id="createDescription" />
             </div>
             <div>
-              <p>Instructions:</p>
-              <textarea />
+              <p className ="inputLabel">Instructions:</p>
+              <textarea id="createInstructions" />
             </div>
             <div>
-              <p>Image URL Link:</p>
+              <p className ="inputLabel">Image URL Link:</p>
               <input
-                id="textField"
+                id="createPicture"
                 className={classList.join(" ")}
                 type="text"
               />
             </div>
             <div>
-              <p>Cook:</p>
+              <p className ="inputLabel">Cook:</p>
               <input
-                id="textField"
+                id="createCook"
                 className={classList.join(" ")}
                 type="text"
               />
@@ -68,7 +73,7 @@ class CreateForm extends Component {
           <div className="ingedientsDiv">
             <div>
               <p className="subtitle">Add Ingredient</p>
-              <p>Ingredient:</p>
+              <p className ="inputLabel">Ingredient:</p>
               <input
                 id="addIngredient"
                 className={classList.join(" ")}
@@ -76,7 +81,7 @@ class CreateForm extends Component {
               />
             </div>
             <div>
-              <p>Amount:</p>
+              <p className ="inputLabel">Amount:</p>
               <input
                 id="addAmount"
                 className={classList.join(" ")}

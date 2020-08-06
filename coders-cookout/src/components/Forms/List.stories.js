@@ -9,7 +9,7 @@ const ingredients = [{_id: "5f29a06a7afbf200047df4ca", ingredient: "Banana", amo
 storiesOf("List", module).add("List", () => (
   <List content={ingredients}/>
 ))
-
+//only need one module
 storiesOf("List", module).add("List Checkbox", () => (
     <List type="checkbox" content={ingredients}/>
 ))

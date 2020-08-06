@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import { NaviBar } from "./components/NaviBar";
@@ -11,14 +16,15 @@ function App() {
       <div>
         <NaviBar />
         <nav>
-          <Link to="/"></Link>
+          <Link to="/home"></Link>
           <Link className="formLink" to="/formpage">
             To Form Page
           </Link>
         </nav>
         <main>
-          <Route path="/" component={Home} />
+          <Route path="/home" component={Home} />
           <Route path="/formPage" component={FormPage} exact={true} />
+          <Route path="/" render={() => <Redirect to="/home" />} />
         </main>
       </div>
     </Router>

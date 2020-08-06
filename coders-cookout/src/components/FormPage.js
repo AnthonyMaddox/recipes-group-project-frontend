@@ -9,7 +9,10 @@ class FormPage extends Component {
     };
   }
   render() {
-    return <div className="formPageBody"></div>;
+    return <div className="formPageBody">
+
+          
+          </div>
   }
 }
 

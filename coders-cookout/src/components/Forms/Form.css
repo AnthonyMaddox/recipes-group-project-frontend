@@ -1,0 +1,12 @@
+.createForm {
+   width: 80vw;
+   display: flex;
+   justify-content: space-around;
+}
+.addRecipeDiv {
+  display: flex;
+  flex-direction: column;
+}
+p {
+   margin: 0;
+}

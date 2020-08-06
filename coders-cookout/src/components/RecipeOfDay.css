@@ -1,6 +1,6 @@
 .block {
   width: 106%;
-  padding: 1rem;
+  padding: 0.5rem;
   height: 50vw;
   position: relative;
   border: solid lightgray;
@@ -10,24 +10,29 @@
 }
 .content {
   color: #707070;
-  padding-left: 0.1em;
   font-weight: bolder;
 }
 .recipeOfDay-img {
-  width: 35%;
+  width: 50%;
   height: 30%;
-  margin-left: 25%;
+  margin-left: 20%;
   object-fit: cover;
 }
-p {
-  padding-right: 1em;
-}
+
 h2 {
-  margin-left: 1.2em;
+  margin-left: 1.6em;
   padding: 0.5em 0em;
 }
 
 h3 {
-  margin-left: 2em;
-  padding-top: 1em;
+  margin-left: 3.7em;
+  padding-top: 0.5em;
+}
+
+p {
+  margin-left: 0.5em;
+  padding-right: 1em;
+}
+.pDescription {
+  margin-left: 1.3em;
 }

@@ -34,7 +34,7 @@ class Jumbo extends Component {
             <img className="jumboPic" src={this.state.picture} />
             <hr></hr>
             <h3 className="h3Jumbo">{this.state.title}</h3>
-            <p className="pJumbo">{this.state.description}</p>
+            <h6 className="pJumbo">{this.state.description}</h6>
             <button>Get Recipe</button>
           </div>
         </div>

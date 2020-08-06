@@ -12,13 +12,13 @@ function Home() {
   return (
     <div>
       <Row>
-        <Col xs={3}>
+        <Col>
           <RecipeOfDay />
         </Col>
         <Col xs={6}>
           <Jumbo />
         </Col>
-        <Col xs={3}>
+        <Col>
           <ImagesColumn />
         </Col>
       </Row>

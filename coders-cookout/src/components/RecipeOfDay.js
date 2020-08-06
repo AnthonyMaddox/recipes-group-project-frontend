@@ -21,11 +21,11 @@ class RecipeOfDay extends Component {
       console.log(data[0].ingredients);
 
       this.setState({
-        picture: data[10].picture,
-        title: data[10].title,
-        description: data[10].description,
-        ingredients: data[10].ingredients,
-        instructions: data[10].instructions,
+        picture: data[4].picture,
+        title: data[4].title,
+        description: data[4].description,
+        ingredients: data[4].ingredients,
+        instructions: data[4].instructions,
       });
       console.log("Data has been received");
     });
@@ -42,7 +42,7 @@ class RecipeOfDay extends Component {
               src={this.state.picture}
             />
             <h3>{this.state.title}</h3>
-            <p>{this.state.description}</p>
+            <p className="pDescription">{this.state.description}</p>
             <ul>
               <List content={this.state.ingredients} />
             </ul>

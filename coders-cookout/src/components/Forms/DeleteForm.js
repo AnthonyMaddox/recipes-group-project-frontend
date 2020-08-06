@@ -1,13 +1,7 @@
 import React, { Component } from "react";
 import "./Form.css";
 import axios from "axios";
-/*let types = ["IWB", "TextField"];
-   if (types.includes(props.type)) {
-     classList.push(`IWB-${props.type}`);
-   }*/
-//need to use e.target.value and set state
-// convert to a class!!! set state and include something to hold the value of input.value
-let classList = [];
+
 class DeleteForm extends Component {
   constructor(props) {
     super(props);
@@ -16,10 +10,10 @@ class DeleteForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log("oh no I'm deleting");
-    let idInput = document.getElementById("idInput").value;
-    console.log(idInput);
+    let idDeleteInput = document.getElementById("idDeleteInput").value;
+    console.log(idDeleteInput);
 
-    let res = `https://coders-cookout.herokuapp.com/recipes/${idInput}`;
+    let res = `https://coders-cookout.herokuapp.com/recipes/${idDeleteInput}`;
     console.log(res);
 
     axios.delete(res).then((res) => {
@@ -34,9 +28,9 @@ class DeleteForm extends Component {
         <h4 className="createFormTitle">Delete A Recipe By ID</h4>
         <div className="idField">
           <p>ID:</p>
-          <input id="idInput" type="text" />
+          <input id="idDeleteInput" type="text" />
         </div>
-        <div className="bigButton">
+        <div className="deleteButton">
           <br></br>
           <button className="formButton">Delete Recipe</button>
         </div>

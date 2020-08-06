@@ -11,11 +11,29 @@
   display: flex;
   flex-direction: column;
 }
+.ingredientForm {
+  display: none;
+}
 .bigButton {
+  margin: 0;
+}
+.deleteButton {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 30px;
+}
+.createRecipeButton {
+  width: 200px;
+  padding: 5px 5px 50px 5px;
+  background-color: #de6c6d;
+  display: flex;
+  color: white;
+}
+.updateRecipeButton {
+  width: 100px;
+  padding: 5px 5px 50px 5px;
+  background-color: #de6c6d;
+  display: flex;
+  color: white;
 }
 .idField {
   margin: -10px 0 20px 0;

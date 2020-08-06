@@ -21,11 +21,11 @@ class RecipeOfDay extends Component {
       console.log(data[0].ingredients);
 
       this.setState({
-        picture: data[0].picture,
-        title: data[0].title,
-        description: data[0].description,
-        ingredients: data[0].ingredients,
-        instructions: data[0].instructions,
+        picture: data[10].picture,
+        title: data[10].title,
+        description: data[10].description,
+        ingredients: data[10].ingredients,
+        instructions: data[10].instructions,
       });
       console.log("Data has been received");
     });

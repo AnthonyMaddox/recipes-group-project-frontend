@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./Jumbo.css";
+import Button from "./Buttons/Button";
 
 class Jumbo extends Component {
   constructor(props) {
@@ -17,9 +18,9 @@ class Jumbo extends Component {
       const data = res.data;
 
       this.setState({
-        picture: data[9].picture,
-        title: data[9].title,
-        description: data[9].description,
+        picture: data[11].picture,
+        title: data[11].title,
+        description: data[11].description,
       });
       console.log("Data has been received");
     });
@@ -31,9 +32,9 @@ class Jumbo extends Component {
         <div className="jumboContent">
           <div className="jumbo item1">
             <img className="jumboPic" src={this.state.picture} />
-            <hr></hr>
-            <h3>{this.state.title}</h3>
+            <h3 className="h3Jumbo">{this.state.title}</h3>
             <p className="pJumbo">{this.state.description}</p>
+            <Button />
           </div>
         </div>
       </div>

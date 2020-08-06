@@ -1,18 +1,32 @@
 .block {
-  width: 50%;
+  width: 106%;
   padding: 1rem;
   height: 50vw;
   position: relative;
   border: solid lightgray;
   padding: 3px;
   background: #e9f2e9;
+  margin: 0.5em;
 }
 .content {
   color: #707070;
-  padding-left: 2em;
+  padding-left: 0.1em;
+  font-weight: bolder;
 }
 .recipeOfDay-img {
   width: 30%;
   height: 30%;
-  margin-left: 15%;
+  margin-left: 25%;
+}
+p {
+  padding-right: 1em;
+}
+h2 {
+  margin-left: 1.2em;
+  padding: 0.5em 0em;
+}
+
+h3 {
+  margin-left: 2em;
+  padding-top: 1em;
 }

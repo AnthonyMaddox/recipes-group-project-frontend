@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./RecipeOfDay.css";
-// import List from "./Forms/List";
+import List from "./Forms/List";
 
 class RecipeOfDay extends Component {
   constructor(props) {
@@ -21,11 +21,11 @@ class RecipeOfDay extends Component {
       console.log(data[0].ingredients);
 
       this.setState({
-        picture: data[0].picture,
-        title: data[0].title,
-        description: data[0].description,
-        ingredients: data[0].ingredients,
-        instructions: data[0].instructions,
+        picture: data[10].picture,
+        title: data[10].title,
+        description: data[10].description,
+        ingredients: data[10].ingredients,
+        instructions: data[10].instructions,
       });
       console.log("Data has been received");
     });
@@ -33,13 +33,19 @@ class RecipeOfDay extends Component {
 
   render() {
     return (
-      <div className="recipeOfDay item">
-        <h2>Recipe of The Day</h2>
-        <img src={this.state.picture} />
-        <h3>{this.state.title}</h3>
-        <p>{this.state.description}</p>
-        <ul>{/* <List content={this.state.ingredients} /> */}</ul>
-        <p>{this.state.instructions}</p>
+      <div className="block">
+        <div className="content">
+          <div className="recipeOfDay item">
+            <h2>Recipe of The Day</h2>
+            <img className="recipeOfDay-img" src={this.state.picture} />
+            <h3>{this.state.title}</h3>
+            <p>{this.state.description}</p>
+            <ul>
+              <List content={this.state.ingredients} />
+            </ul>
+            <p>{this.state.instructions}</p>
+          </div>
+        </div>
       </div>
     );
   }

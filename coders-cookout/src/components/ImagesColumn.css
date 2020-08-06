@@ -13,14 +13,14 @@
   font-weight: bolder;
 }
 .thumb {
-  width: 90%;
+  width: 80%;
   height: 90%;
   z-index: -1;
+  padding: 1em;
   /* margin-left: 20%; */
 }
 h5 {
   z-index: 1;
   position: absolute;
   color: white;
-  padding-top: -2em;
 }

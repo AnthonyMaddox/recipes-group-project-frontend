@@ -24,11 +24,9 @@ function App() {
         </nav>
         <main>
           <Route path="/home" component={Home} />
-          <Route path="/formPage" component={FormPage} exact={true} />
+          <Route path="/formpage" component={FormPage} exact={true} />
           <Route path="/" render={() => <Redirect to="/home" />} />
-
           <Route path="/search" component={SearchPage} />
-          {/* <Route path="/forms" component={FormPage} /> */}
         </main>
       </div>
     </Router>

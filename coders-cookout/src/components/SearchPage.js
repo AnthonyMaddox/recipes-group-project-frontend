@@ -3,38 +3,32 @@ import axios from "axios";
 import "./SearchPage.css";
 
 class SearchPage extends Component {
-  //   constructor(props) {
-  //     super(props);
-  //     this.state = {
-  //       recipes: data,
-  //       search: "",
-  //     };
-  //   }
+  state = {
+    searchValue: "",
+  };
+  handleOnChange = (event) => {
+    this.setState({ searchValue: event.target.value });
+  };
+  handleSearch = () => {};
 
-  //   componentDidMount() {
-  //     axios.get("https://coders-cookout.herokuapp.com/recipes").then((res) => {
-  //       const data = res.data;
-  //       console.log(data);
+  getData = (searchInput) => {
+    axios.get("https://coders-cookout.herokuapp.com/recipes").then((res) => {
+      const data = res.data;
+      console.log(data);
+    });
+  };
 
-  //       this.setState({ recipes: data });
-  //       console.log("Data has been received");
-  //     });
-  //   }
-
-  //   search = (e) => {
-  //     e.preventDefault();
-  //     this.setState({ search: e.target.value });
-  //     let filter = recipes.filter((element) =>
-  //       element.person.toLowerCase().includes(e.target.value.toLowerCase())
-  //     );
-  //     console.log(filter);
-  //     this.setState({ recipes: filter });
-  //   };
   render() {
     return (
       <div>
-        <label>Search</label>
-        <input onChange={this.search}></input>
+        <input
+          name="text"
+          type="text"
+          placeholder="Search"
+          onChange={(event) => this.handleOnChange(event)}
+          value={this.state.searchValue}
+        />
+        <button onClick={this.handleSearch}>Search</button>
       </div>
     );
   }

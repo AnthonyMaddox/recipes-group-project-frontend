@@ -36,12 +36,12 @@ class RecipeOfDay extends Component {
       <div className="block">
         <div className="content">
           <div className="recipeOfDay item">
-            <h2 className="recipeofDayH2">Recipe of The Day</h2>
+            <h2>Recipe of The Day</h2>
             <img
               className="recipeOfDay-img img-fluid"
               src={this.state.picture}
             />
-            <h3 className="recipeofDayH3">{this.state.title}</h3>
+            <h3>{this.state.title}</h3>
             <p className="pDescription">{this.state.description}</p>
             <ul>
               <List content={this.state.ingredients} />

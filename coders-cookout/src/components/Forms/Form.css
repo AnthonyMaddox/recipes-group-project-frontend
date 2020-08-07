@@ -12,6 +12,10 @@
   display: flex;
   flex-direction: column;
 }
+.recipeDivFix {
+  margin-right: -200px;
+  margin-left: 300px;
+}
 .ingredientForm {
   display: none;
 }
@@ -82,13 +86,16 @@
   font-size: 10px;
   margin: 10px 0 0 -15px;
 }
+.updateForm {
+  margin: 0 -150px 0 500px;
+}
 /*form page*/
 
 .addDiv {
   display: none;
 }
 .addBtn {
-  height: 50px;
+  height: 60px;
   width: 200px;
   padding: 10px 25px;
   border: none;
@@ -99,12 +106,18 @@
 .deleteDiv {
   display: none;
 }
+<<<<<<< HEAD
 
 #idDeleteInput {
   margin-top: 2em;
   height: 2em;
 }
 
+=======
+.DIDiv {
+  display: none;
+}
+>>>>>>> d73f47ddf070bdb89209c98e6b46d2f9e7479156
 .crudDiv {
   display: flex;
   justify-content: center;
@@ -114,11 +127,13 @@
   display: block;
 }
 .formButton {
-  padding: 5px 80px 50px 5px;
+  width: 90px;
+  padding: 5px 20px 50px 5px;
   background-color: #de6c6d;
   display: flex;
   color: white;
 }
+<<<<<<< HEAD
 
 #ingredient,
 #amount {
@@ -146,4 +161,11 @@
   width: 12em;
   margin: 1em 0 0 7em;
   height: 2em;
+=======
+.DIformButn {
+  margin-left: 200px;
+}
+.buttonFormFix {
+  margin-top: -60px;
+>>>>>>> d73f47ddf070bdb89209c98e6b46d2f9e7479156
 }

@@ -18,14 +18,18 @@
   margin-left: 7%;
   padding-top: 2%;
 }
-button {
+.searchButton {
   margin-top: 2em;
   height: 2em;
   width: 7em;
   position: relative;
-  margin-left: 5em;
+  margin-left: 0.5em;
   background-color: #e27878;
   color: white;
+}
+.inputSearch {
+  margin-left: 35%;
+  width: 20em;
 }
 h6 {
   margin-left: 30%;
@@ -34,4 +38,42 @@ h6 {
 .h3Jumbo {
   margin-top: -0.5em;
   margin-left: 17%;
+}
+
+.jumbo {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  transition: all 0.3s ease;
+  opacity: 0;
+  background-color: #9bcd9b;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.overlayFade {
+  height: 250px;
+  width: 250px;
+  top: 0;
+  left: 75px;
+  background-color: #9bcd9b;
+}
+@media only screen and (max-width: 1147px) {
+  .jumboBlock {
+    height: 60vw;
+  }
+}
+@media only screen and (max-width: 895px) {
+  .jumboBlock {
+    height: 75vw;
+  }
+  .h3Jumbo {
+    font-size: 1.2em;
+  }
 }

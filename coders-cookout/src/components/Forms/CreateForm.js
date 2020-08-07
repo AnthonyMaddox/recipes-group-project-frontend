@@ -89,9 +89,7 @@ class CreateForm extends Component {
             </div>
             <div className="bigButton">
               <br></br>
-              <button className="createRecipeButton">
-                Create Recipe and Add Ingredients
-              </button>
+              <button className="createRecipeButton">Create Recipe and Add Ingredients</button>
             </div>
           </div>
         </form>
@@ -121,6 +119,7 @@ class CreateForm extends Component {
             <button className="formButton">Add Ingredient</button>
           </div>
         </form>
+
       </div>
     );
   }
@@ -152,3 +151,4 @@ export default CreateForm;
             <button className="formButton">Delete Ingredient</button>
           </div> */
 }
+

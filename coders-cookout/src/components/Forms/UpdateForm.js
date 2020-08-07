@@ -39,22 +39,21 @@ class UpdateForm extends Component {
       });
   }
   handleISubmit(e) {
-    e.preventDefault();
-    let idRecipeInput = document.querySelector("#updateIngredientInputId")
-      .value;
-    let ingredient = document.querySelector("#updateIngredient").value;
-    let amount = document.querySelector("#updateAmount").value;
-    let Ires = `https://coders-cookout.herokuapp.com/recipes/${idRecipeInput}/ingredients`;
-    axios
-      .post(Ires, {
-        ingredient: ingredient,
-        amount: amount,
-      })
-      .then((Ires) => {
-        console.log(Ires.data.ingredients);
-        //alert(`you added a new ingredient ${Ires.data.ingredients[0].ingredient}`)
-      });
-  }
+   e.preventDefault();
+   let idRecipeInput = document.querySelector("#updateIngredientInputId").value;
+   let ingredient = document.querySelector("#updateIngredient").value;
+   let amount = document.querySelector("#updateAmount").value;
+   let Ires = `https://coders-cookout.herokuapp.com/recipes/${idRecipeInput}/ingredients`;
+   axios
+     .post(Ires, {
+       ingredient: ingredient,
+       amount: amount,
+     })
+     .then((Ires) => {
+       console.log(Ires.data.ingredients);
+       //alert(`you added a new ingredient ${Ires.data.ingredients[0].ingredient}`)
+     });
+ }
 
   render() {
     return (
@@ -114,7 +113,6 @@ class UpdateForm extends Component {
             <p className="inputLabel">Amount:</p>
             <input id="updateAmount" type="text" />
           </div>
-          <br></br>
           <div>
             <button className="formButton">Add Ingredient</button>
           </div>

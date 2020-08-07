@@ -28,19 +28,26 @@ class SearchPage extends Component {
     return (
       <div>
         <input
+          className="recipeInput"
           name="text"
           type="text"
           placeholder="Search"
           onChange={(event) => this.handleOnChange(event)}
           value={this.state.searchValue}
         />
-        <button onClick={this.handleSearch}>Search</button>
+        <button className="recipeButton" onClick={this.handleSearch}>
+          Search
+        </button>
         {this.state.recipes ? (
           <div className="recipeResult container">
             {this.state.recipes.map((recipe, index) => (
               <div key={index}>
-                <img src={recipe.picture} alt="recipe-thumb" />
-                <h3>{recipe.title}</h3>
+                <img
+                  className="recipeImage"
+                  src={recipe.picture}
+                  alt="recipe-thumb"
+                />
+                <h3 className="recipeH3">{recipe.title}</h3>
               </div>
             ))}
           </div>

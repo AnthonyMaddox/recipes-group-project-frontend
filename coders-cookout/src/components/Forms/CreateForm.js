@@ -38,6 +38,7 @@ class CreateForm extends Component {
       .then((res) => {
         console.log(res.data);
         this.setState({ newValue: res.data._id });
+        alert(`You added a new recipe!`);
       });
   }
   handleISubmit(e) {
@@ -53,7 +54,9 @@ class CreateForm extends Component {
       })
       .then((Ires) => {
         console.log(Ires.data.ingredients);
-        alert(`you added a new ingredient ${Ires.data.ingredients[0].ingredient}`)
+        alert(
+          `you added a new ingredient ${Ires.data.ingredients[0].ingredient}`
+        );
       });
   }
 
@@ -78,22 +81,18 @@ class CreateForm extends Component {
               </div>
               <div>
                 <p className="inputLabel">Image URL Link:</p>
-                <input
-                  id="createPicture"
-                  type="text"
-                />
+                <input id="createPicture" type="text" />
               </div>
               <div>
                 <p className="inputLabel">Cook:</p>
-                <input
-                  id="createCook"
-                  type="text"
-                />
+                <input id="createCook" type="text" />
               </div>
             </div>
             <div className="bigButton">
               <br></br>
-              <button className="createRecipeButton">Create Recipe and Add Ingredients</button>
+              <button className="createRecipeButton">
+                Create Recipe and Add Ingredients
+              </button>
             </div>
           </div>
         </form>
@@ -123,36 +122,9 @@ class CreateForm extends Component {
             <button className="formButton">Add Ingredient</button>
           </div>
         </form>
-
       </div>
     );
   }
 }
 
 export default CreateForm;
-//  if (props.large) {
-//    classList.push("large");
-// }
-// if (props.small) {
-//   classList.push("small");
-// }
-//value={this.state.value} onChange={this.handleChange}
-{
-  /* <div>
-            <p className="subtitle">Delete Ingredient</p>
-            <p>Ingredient:</p>
-            <input
-              id="addIngredient"
-              className={classList.join(" ")}
-              type="text"
-            />
-          </div>
-          <div>
-            <p>Amount:</p>
-            <input id="addAmount" className={classList.join(" ")} type="text" />
-          </div>
-          <div>
-            <button className="formButton">Delete Ingredient</button>
-          </div> */
-}
-

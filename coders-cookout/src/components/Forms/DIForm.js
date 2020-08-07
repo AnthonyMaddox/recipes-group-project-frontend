@@ -22,6 +22,7 @@ class DIForm extends Component {
     axios.delete(res).then((res) => {
       console.log(res);
       console.log(res.data);
+      alert(`you deleted an ingredient!`);
     });
   }
 

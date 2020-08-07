@@ -26,3 +26,12 @@ h5 {
   color: #707070;
   text-align: center;
 }
+
+@media all and (max-width: 1463px) and (min-width: 520px) {
+  .thumb {
+    width: 95%;
+    height: 190px;
+    object-fit: cover;
+    margin-left: 0.7rem;
+  }
+}

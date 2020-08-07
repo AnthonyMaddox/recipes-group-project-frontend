@@ -15,11 +15,13 @@ class SearchPage extends Component {
   };
 
   getData = (searchInput) => {
-    axios.get("https://coders-cookout.herokuapp.com/recipes").then((res) => {
-      const data = res.data;
-      console.log(data);
-      this.setState({ recipes: data });
-    });
+    axios
+      .get(`https://coders-cookout.herokuapp.com/recipes/title/${searchInput}`)
+      .then((res) => {
+        const data = res.data;
+        console.log(data);
+        this.setState({ recipes: data });
+      });
   };
 
   render() {
@@ -37,7 +39,6 @@ class SearchPage extends Component {
           <div className="recipeResult container">
             {this.state.recipes.map((recipe, index) => (
               <div key={index}>
-                <h1>{recipe.strRecipe}</h1>
                 <img src={recipe.picture} alt="recipe-thumb" />
                 <h3>{recipe.title}</h3>
               </div>

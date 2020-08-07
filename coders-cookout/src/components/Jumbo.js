@@ -35,7 +35,6 @@ class Jumbo extends Component {
             <hr></hr>
             <h3 className="h3Jumbo">{this.state.title}</h3>
             <h6 className="pJumbo">{this.state.description}</h6>
-            <button>Get Recipe</button>
           </div>
         </div>
       </div>

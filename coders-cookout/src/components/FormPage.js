@@ -4,7 +4,7 @@ import "./Forms/Form.css";
 import CreateForm from "./Forms/CreateForm.js";
 import UpdateForm from "./Forms/UpdateForm.js";
 import DeleteForm from "./Forms/DeleteForm.js";
-import DIForm from "./Forms/DeleteForm.js";
+import DIForm from "./Forms/DIForm.js";
 
 class FormPage extends Component {
   constructor(props) {

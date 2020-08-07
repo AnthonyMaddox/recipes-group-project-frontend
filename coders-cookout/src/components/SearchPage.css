@@ -1,9 +1,9 @@
-input {
+inputSearch {
   margin-left: 50%;
   margin-top: 2em;
   width: 15em;
 }
-button {
+searchButton {
   margin-left: 50%;
   margin-top: 2em;
 }
@@ -15,12 +15,18 @@ button {
   margin: 0 auto;
 }
 
-img {
-  width: 17rem;
-  height: 17rem;
+.searchImg {
+  width: 20rem;
+  height: 20rem;
   justify-content: space-between;
+  margin-left: 110%;
+  margin-top: 3em;
 }
 
 hr {
   border: 3px solid #707070;
+}
+.searchH3 {
+  margin-left: 125%;
+  width: 100%;
 }

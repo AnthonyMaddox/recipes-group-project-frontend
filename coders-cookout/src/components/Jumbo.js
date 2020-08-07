@@ -38,7 +38,7 @@ class Jumbo extends Component {
           <div className="jumbo item1">
             <img className="jumboPic" src={this.state.picture} />
             <div class="overlay overlayLeft">
-              <h3>{this.state.title}</h3>
+              <h3 className="jumboH3">{this.state.title}</h3>
               <p className="pDescription">{this.state.description}</p>
               <ul>
                 <List content={this.state.ingredients} />

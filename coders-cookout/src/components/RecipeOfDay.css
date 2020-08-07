@@ -63,3 +63,15 @@ p {
     font-size: 2.5em;
   }
 }
+@media only screen and (max-width: 895px) {
+  .block {
+    height: 74vw;
+  }
+  .content {
+    font-size: 0.8em;
+  }
+  .recipeofDayH2,
+  .recipeofDayH3 {
+    font-size: 2.5em;
+  }
+}

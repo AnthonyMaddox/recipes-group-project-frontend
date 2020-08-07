@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
 
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect,
+} from "react-router-dom";
+
 import './SignUpForm.css'
+import LogInForm from '../LogInForm/LogInForm';
 
 class SignUpForm extends Component {
   render () {
@@ -8,7 +18,9 @@ class SignUpForm extends Component {
     return (
       <div>
         <h2>Sign Up</h2>
-
+        <div>
+          <Route path="/login" component={LogInForm} />
+          </div>
         <form>
           <div>
             <label htmlFor='email'>Email</label>
@@ -20,6 +32,7 @@ class SignUpForm extends Component {
             <input type='text' name='password' onChange={this.props.handleInput} />
           </div>
           <input value='Submit' type='submit' onClick={this.props.handleSignUp} />
+          <p>Already a member? <Link to="/login">Login</Link></p>
         </form>
       </div>
     )

@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 import './LogInForm.css'
+
 
 class LogInForm extends Component {
   render () {
+    console.log("Hello from Login")
     return (
       <div>
         <h2>Log In</h2>

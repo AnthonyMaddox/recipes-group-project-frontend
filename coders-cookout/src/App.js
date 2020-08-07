@@ -107,13 +107,20 @@ class App extends Component {
           <Route path="/" render={() => <Redirect to="/home" />} />
           <Route path="/search" component={SearchPage} />
           <Switch>
-          <Route path='/signin'
+          <Route path='/signup'
               render={(props) => {
                 return (
                   <SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
                 )
               }}
             />
+          <Route path='/login'
+              render={(props) => {
+                return (
+                  <LogInForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
+                )
+              }}
+          />
           </Switch>
           
         </main>

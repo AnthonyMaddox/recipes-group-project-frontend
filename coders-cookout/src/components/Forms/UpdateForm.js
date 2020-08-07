@@ -43,7 +43,7 @@ class UpdateForm extends Component {
    let idRecipeInput = document.querySelector("#updateIngredientInputId").value;
    let ingredient = document.querySelector("#updateIngredient").value;
    let amount = document.querySelector("#updateAmount").value;
-   let Ires = `https://coders-cookout.herokuapp.com/recipes/${idRecepInput}/ingredients`;
+   let Ires = `https://coders-cookout.herokuapp.com/recipes/${idRecipeInput}/ingredients`;
    axios
      .post(Ires, {
        ingredient: ingredient,

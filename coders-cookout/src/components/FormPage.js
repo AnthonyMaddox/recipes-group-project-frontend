@@ -4,7 +4,7 @@ import "./Forms/Form.css";
 import CreateForm from "./Forms/CreateForm.js";
 import UpdateForm from "./Forms/UpdateForm.js";
 import DeleteForm from "./Forms/DeleteForm.js";
-import DIForm from "./Forms/DIForm.js";
+import DIForm from "./Forms/DeleteForm.js";
 
 class FormPage extends Component {
   constructor(props) {
@@ -50,7 +50,7 @@ class FormPage extends Component {
     DIDiv.classList.remove("display");
   };
   handleDIClick = (e) => {
-    console.log("delete ingredient");
+    console.log("delete");
     e.preventDefault();
     let DIDiv = document.querySelector(".DIDiv");
     DIDiv.classList.toggle("display");

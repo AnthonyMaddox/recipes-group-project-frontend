@@ -9,11 +9,14 @@ class DIForm extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log("oh no I'm deleting");
-    let idDeleteInput = document.getElementById("idDeleteInput").value;
-    console.log(idDeleteInput);
-
-    let res = `https://coders-cookout.herokuapp.com/recipes/${idDeleteInput}`;
+    console.log("oh no I'm deleting an ingredient");
+    let idRecipeDeleteInput = document.getElementById("idRecipeDeleteInput")
+      .value;
+    console.log(idRecipeDeleteInput);
+    let idIngredientDeleteInput = document.getElementById(
+      "idIngredientDeleteInput"
+    ).value;
+    let res = `https://coders-cookout.herokuapp.com/recipes/${idRecipeDeleteInput}/ingredients/${idIngredientDeleteInput}`;
     console.log(res);
 
     axios.delete(res).then((res) => {

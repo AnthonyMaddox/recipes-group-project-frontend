@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./Jumbo.css";
 import Button from "./Buttons/Button";
+import List from "./Forms/List";
 
 class Jumbo extends Component {
   constructor(props) {
@@ -10,6 +11,8 @@ class Jumbo extends Component {
       picture: "",
       title: "",
       description: "",
+      ingredients: [],
+      instructions: "",
     };
   }
 

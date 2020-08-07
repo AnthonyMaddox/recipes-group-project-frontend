@@ -15,39 +15,31 @@ class SearchPage extends Component {
   };
 
   getData = (searchInput) => {
-    axios
-      .get(`https://coders-cookout.herokuapp.com/recipes/title/${searchInput}`)
-      .then((res) => {
-        const data = res.data;
-        console.log(data);
-        this.setState({ recipes: data });
-      });
+    axios.get("https://coders-cookout.herokuapp.com/recipes").then((res) => {
+      const data = res.data;
+      console.log(data);
+      this.setState({ recipes: data });
+    });
   };
 
   render() {
     return (
       <div>
         <input
-          className="recipeInput"
           name="text"
           type="text"
           placeholder="Search"
           onChange={(event) => this.handleOnChange(event)}
           value={this.state.searchValue}
         />
-        <button className="recipeButton" onClick={this.handleSearch}>
-          Search
-        </button>
+        <button onClick={this.handleSearch}>Search</button>
         {this.state.recipes ? (
           <div className="recipeResult container">
             {this.state.recipes.map((recipe, index) => (
               <div key={index}>
-                <img
-                  className="recipeImage"
-                  src={recipe.picture}
-                  alt="recipe-thumb"
-                />
-                <h3 className="recipeH3">{recipe.title}</h3>
+                <h1>{recipe.strRecipe}</h1>
+                <img src={recipe.picture} alt="recipe-thumb" />
+                <h3>{recipe.title}</h3>
               </div>
             ))}
           </div>

@@ -15,21 +15,12 @@ button {
   margin: 0 auto;
 }
 
-.recipeImage {
-  width: 25rem;
-  height: 25rem;
-  margin: 3em 0 0 20em;
+img {
+  width: 17rem;
+  height: 17rem;
+  justify-content: space-between;
 }
 
-.recipeH3 {
-  margin-left: 56%;
-}
-
-.recipeInput {
-  margin-left: 32em;
-  margin-top: 3em;
-  height: 2.5em;
-}
-.recipeButton {
-  height: 2.5em;
+hr {
+  border: 3px solid #707070;
 }

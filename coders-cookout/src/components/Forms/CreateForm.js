@@ -59,8 +59,8 @@ class CreateForm extends Component {
 
   render() {
     return (
-      <div className="createForm containerAdd">
-        <form onSubmit={this.handleSubmit}>
+      <div className="createForm">
+        <form onSubmit={this.handleSubmit} className="recipeDivFix">
           <h4 className="createFormTitle">Add A New Recipe!</h4>
           <div id="createForm">
             <div className="addRecipeDiv">
@@ -93,9 +93,7 @@ class CreateForm extends Component {
             </div>
             <div className="bigButton">
               <br></br>
-              <button className="createRecipeButton">
-                Create Recipe and Add Ingredients
-              </button>
+              <button className="createRecipeButton">Create Recipe and Add Ingredients</button>
             </div>
           </div>
         </form>
@@ -125,6 +123,7 @@ class CreateForm extends Component {
             <button className="formButton">Add Ingredient</button>
           </div>
         </form>
+
       </div>
     );
   }
@@ -156,3 +155,4 @@ export default CreateForm;
             <button className="formButton">Delete Ingredient</button>
           </div> */
 }
+

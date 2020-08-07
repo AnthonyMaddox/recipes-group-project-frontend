@@ -2,7 +2,6 @@
   width: 80vw;
   display: flex;
   justify-content: space-around;
-  margin-left: 10%;
 }
 .createFormTitle {
   font-family: "Orbitron", sans-serif;
@@ -26,48 +25,19 @@
   display: flex;
   justify-content: center;
 }
-
-.createForm {
-  background-image: url
-    (
-      "https://images.pexels.com/photos/326279/pexels-photo-326279.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-    );
-}
-
-#createTitle,
-#createDescription,
-#createInstructions,
-#createPicture,
-#createCook {
-  width: 30em;
-}
 .createRecipeButton {
-  width: 275px;
-  padding: 5px 5px 40px 5px;
+  width: 200px;
+  padding: 5px 5px 50px 5px;
   background-color: #de6c6d;
   display: flex;
   color: white;
-  margin-left: 6em;
-}
-#idRecipeInput,
-.pId {
-  margin-top: 2em;
-}
-
-#updateTitle,
-#updateDescription,
-#updateInstructions,
-#updatePicture,
-#updateCook {
-  width: 23em;
 }
 .updateRecipeButton {
-  width: 150px;
-  height: 2em;
+  width: 100px;
+  padding: 5px 5px 50px 5px;
   background-color: #de6c6d;
   display: flex;
   color: white;
-  margin-left: 6em;
 }
 .idField {
   margin: -10px 0 20px 0;
@@ -77,11 +47,6 @@
 .inputLabel {
   margin-bottom: 0;
 }
-
-.ingredientUpdateForm {
-  margin-left: -5em;
-}
-
 .subtitle {
   font-size: 10px;
   margin: 10px 0 0 -15px;
@@ -106,12 +71,9 @@
 .deleteDiv {
   display: none;
 }
-
-#idDeleteInput {
-  margin-top: 2em;
-  height: 2em;
+.DIDiv {
+  display: none;
 }
-
 .crudDiv {
   display: flex;
   justify-content: center;
@@ -127,31 +89,9 @@
   display: flex;
   color: white;
 }
-
-#ingredient,
-#amount {
-  width: 25em;
+.DIformButn {
+  margin-left: 200px;
 }
-.ingredientButton {
-  margin: 1em 0 0 8em;
-
-  width: 10em;
-}
-#idIngredientInput,
-.addId {
-  margin-top: 2em;
-}
-
-.deleteTitle {
-  padding-top: 3em;
-}
-
-#deleteIngredient,
-#deleteAmount {
-  width: 25em;
-}
-.ingDeleteButton {
-  width: 12em;
-  margin: 1em 0 0 7em;
-  height: 2em;
+.buttonFormFix {
+  margin-top: -60px;
 }

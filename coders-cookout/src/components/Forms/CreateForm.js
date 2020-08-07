@@ -59,13 +59,8 @@ class CreateForm extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
       <div className="createForm containerAdd">
         <form onSubmit={this.handleSubmit}>
-=======
-      <div className="createForm">
-        <form onSubmit={this.handleSubmit} className="recipeDivFix">
->>>>>>> d73f47ddf070bdb89209c98e6b46d2f9e7479156
           <h4 className="createFormTitle">Add A New Recipe!</h4>
           <div id="createForm">
             <div className="addRecipeDiv">

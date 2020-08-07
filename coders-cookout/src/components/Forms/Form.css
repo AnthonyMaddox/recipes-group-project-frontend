@@ -2,6 +2,7 @@
   width: 80vw;
   display: flex;
   justify-content: space-around;
+  margin-left: 10%;
 }
 .createFormTitle {
   font-family: "Orbitron", sans-serif;
@@ -21,12 +22,21 @@
   display: flex;
   justify-content: center;
 }
+
+#createTitle,
+#createDescription,
+#createInstructions,
+#createPicture,
+#createCook {
+  width: 30em;
+}
 .createRecipeButton {
-  width: 300px;
-  padding: 5px 5px 50px 5px;
+  width: 275px;
+  padding: 5px 5px 40px 5px;
   background-color: #de6c6d;
   display: flex;
   color: white;
+  margin-left: 6em;
 }
 .updateRecipeButton {
   width: 100px;

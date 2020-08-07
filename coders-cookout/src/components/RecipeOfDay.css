@@ -10,7 +10,7 @@
 }
 .content {
   color: #707070;
-  font-weight: bolder;
+  font-weight: bold;
 }
 .recipeOfDay-img {
   width: 50%;
@@ -35,4 +35,31 @@ p {
 }
 .pDescription {
   margin-left: 1.3em;
+}
+
+@media only screen and (max-width: 1342px) {
+  .content {
+    font-size: 0.8em;
+  }
+  h2,
+  h3 {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 1176px) {
+  h2,
+  h3 {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 1027px) {
+  .content {
+    font-size: 0.5em;
+  }
+  .recipeofDayH2,
+  .recipeofDayH3 {
+    font-size: 2.5em;
+  }
 }

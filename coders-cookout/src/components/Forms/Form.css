@@ -106,18 +106,9 @@
 .deleteDiv {
   display: none;
 }
-<<<<<<< HEAD
-
-#idDeleteInput {
-  margin-top: 2em;
-  height: 2em;
-}
-
-=======
 .DIDiv {
   display: none;
 }
->>>>>>> d73f47ddf070bdb89209c98e6b46d2f9e7479156
 .crudDiv {
   display: flex;
   justify-content: center;
@@ -133,39 +124,9 @@
   display: flex;
   color: white;
 }
-<<<<<<< HEAD
-
-#ingredient,
-#amount {
-  width: 25em;
-}
-.ingredientButton {
-  margin: 1em 0 0 8em;
-
-  width: 10em;
-}
-#idIngredientInput,
-.addId {
-  margin-top: 2em;
-}
-
-.deleteTitle {
-  padding-top: 3em;
-}
-
-#deleteIngredient,
-#deleteAmount {
-  width: 25em;
-}
-.ingDeleteButton {
-  width: 12em;
-  margin: 1em 0 0 7em;
-  height: 2em;
-=======
 .DIformButn {
   margin-left: 200px;
 }
 .buttonFormFix {
   margin-top: -60px;
->>>>>>> d73f47ddf070bdb89209c98e6b46d2f9e7479156
 }

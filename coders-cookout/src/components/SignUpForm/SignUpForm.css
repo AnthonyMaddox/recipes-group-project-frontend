@@ -1,3 +1,7 @@
 form {
     margin: 0 30% 0 30%;
 }
+
+label {
+    padding-right: 15px;
+}

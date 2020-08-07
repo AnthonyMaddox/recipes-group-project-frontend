@@ -82,12 +82,13 @@ class Auth extends Component {
   }
 
   render () {
+    console.log("This is from AUth")
     return (
       <div>
         <NavBar isLoggedIn={this.state.isLoggedIn} />
-        <div className='body'>
+        <div  className='body'>
           <Switch>
-            <Route path='/signup'
+            <Route exact path='/signup'
               render={(props) => {
                 return (
                   <SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />

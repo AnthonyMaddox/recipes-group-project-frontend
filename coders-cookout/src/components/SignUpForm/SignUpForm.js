@@ -4,6 +4,7 @@ import './SignUpForm.css'
 
 class SignUpForm extends Component {
   render () {
+    console.log("Hello from Sign Up")
     return (
       <div>
         <h2>Sign Up</h2>

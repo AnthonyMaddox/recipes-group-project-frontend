@@ -59,7 +59,7 @@ export const NaviBar = () => (
         </Nav.Item>
         <Nav.Item>
           <Nav.Link>
-            <Link to="/user">Sign In</Link>
+            <Link to="/signin">Sign Up</Link>
           </Nav.Link>
         </Nav.Item>
       </Navbar.Collapse>

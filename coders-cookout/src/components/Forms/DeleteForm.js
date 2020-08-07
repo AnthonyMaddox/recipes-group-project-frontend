@@ -19,6 +19,7 @@ class DeleteForm extends Component {
     axios.delete(res).then((res) => {
       console.log(res);
       console.log(res.data);
+      alert(`You deleted recipe: ${res.data._id}`)
     });
   }
 

@@ -36,6 +36,7 @@ class UpdateForm extends Component {
       })
       .then(function (res) {
         console.log(res.data);
+        alert(`You updated ${res.data.title}!`)
       });
   }
   handleISubmit(e) {
@@ -51,7 +52,7 @@ class UpdateForm extends Component {
      })
      .then((Ires) => {
        console.log(Ires.data.ingredients);
-       //alert(`you added a new ingredient ${Ires.data.ingredients[0].ingredient}`)
+       alert(`You added a new ingredient ${Ires.data.ingredients[0].ingredient}`)
      });
  }
 

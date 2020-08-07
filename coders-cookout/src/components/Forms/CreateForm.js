@@ -53,7 +53,7 @@ class CreateForm extends Component {
       })
       .then((Ires) => {
         console.log(Ires.data.ingredients);
-        //alert(`you added a new ingredient ${Ires.data.ingredients[0].ingredient}`)
+        alert(`you added a new ingredient ${Ires.data.ingredients[0].ingredient}`)
       });
   }
 
@@ -80,7 +80,6 @@ class CreateForm extends Component {
                 <p className="inputLabel">Image URL Link:</p>
                 <input
                   id="createPicture"
-                  className={classList.join(" ")}
                   type="text"
                 />
               </div>
@@ -88,7 +87,6 @@ class CreateForm extends Component {
                 <p className="inputLabel">Cook:</p>
                 <input
                   id="createCook"
-                  className={classList.join(" ")}
                   type="text"
                 />
               </div>

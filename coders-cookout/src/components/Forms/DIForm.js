@@ -25,7 +25,7 @@ class DIForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h4 className="createFormTitle">Delete An Ingredient from A Recipe</h4>
+        <h4 className="createFormTitle">Delete An Ingredient From A Recipe</h4>
         <br></br>
         <div className="idField">
           <p>Recipe ID:</p>

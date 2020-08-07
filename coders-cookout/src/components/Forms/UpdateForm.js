@@ -40,97 +40,89 @@ class UpdateForm extends Component {
   }
 
   render() {
-    return (<div className="createForm">
-    <form onSubmit={this.handleSubmit}>
-      <h4 className="createFormTitle">Update Recipe By ID</h4>
-      <div id="createForm">
-        <div className="addRecipeDiv">
-        <div className="idField">
-          <p>ID:</p>
-          <input
-            id="idRecipeInput"
-            type="text"
-          />
-        </div>
-          <div>
-            <p className="inputLabel">Title:</p>
-            <input id="createTitle" type="text" />
-          </div>
-          <div>
-            <p className="inputLabel">Description:</p>
-            <textarea id="createDescription" />
-          </div>
-          <div>
-            <p className="inputLabel">Instructions:</p>
-            <textarea id="createInstructions" />
-          </div>
-          <div>
-            <p className="inputLabel">Image URL Link:</p>
-            <input
-              id="createPicture"
-              className={classList.join(" ")}
-              type="text"
-            />
-          </div>
-          <div>
-            <p className="inputLabel">Cook:</p>
-            <input
-              id="createCook"
-              className={classList.join(" ")}
-              type="text"
-            />
+    return (
+      <div className="createForm">
+        <form onSubmit={this.handleSubmit}>
+          <h4 className="createFormTitle">Update Recipe By ID</h4>
+          <div id="createForm">
+            <div className="addRecipeDiv">
+              <div className="idField">
+                <p className="pId">ID:</p>
+                <input id="idRecipeInput" type="text" />
+              </div>
+              <div>
+                <p className="inputLabelUpdate">Title:</p>
+                <input id="updateTitle" type="text" />
+              </div>
+              <div>
+                <p className="inputLabelUpdate">Description:</p>
+                <textarea id="updateDescription" />
+              </div>
+              <div>
+                <p className="inputLabelUpdate">Instructions:</p>
+                <textarea id="updateInstructions" />
+              </div>
+              <div>
+                <p className="inputLabelUpdate">Image URL Link:</p>
+                <input
+                  id="updatePicture"
+                  className={classList.join(" ")}
+                  type="text"
+                />
+              </div>
+              <div>
+                <p className="inputLabelUpdate">Cook:</p>
+                <input
+                  id="updateCook"
+                  className={classList.join(" ")}
+                  type="text"
+                />
+              </div>
+            </div>
+            <div className="bigButton">
+              <br></br>
 
+              <button className="updateRecipeButton">Update Recipe</button>
+            </div>
           </div>
-        </div>
-        <div className="bigButton">
-          <br></br>
-
-          <button className="updateRecipeButton">Update Recipe</button>
-        </div>
-      </div>
-    </form>
-    {/* ingredients form */}
-    <form className="ingredientUpdateForm" onSubmit={this.handleISubmit}>
-      <div>
-        <h4 className="createFormTitle">Add Ingredient By Recipe ID</h4>
-        <div className="idField">
-          <p>ID:</p>
-          <input
-            id="idIngredientInput"
-            type="text"
-          />
-        </div>
-      </div>
-      <div>
-        <p className="subtitle">Add Ingredient</p>
-        <p className="inputLabel">Ingredient:</p>
-        <input id="ingredient" type="text" />
-      </div>
-      <div>
-        <p className="inputLabel">Amount:</p>
-        <input id="amount" type="text" />
-      </div>
-      <div>
-        <button className="formButton">Add Ingredient</button>
-      </div>
-      <div>
-      <h4 className="createFormTitle">Delete Ingredient By Ingredient ID</h4>
+        </form>
+        {/* ingredients form */}
+        <form className="ingredientUpdateForm" onSubmit={this.handleISubmit}>
+          <div>
+            <h4 className="createFormTitle">Add Ingredient By Recipe ID</h4>
+            <div className="idField">
+              <p className="addId">ID:</p>
+              <input id="idIngredientInput" type="text" />
+            </div>
+          </div>
+          <div>
+            <p className="subtitle">Add Ingredient</p>
+            <p className="Label">Ingredient:</p>
+            <input id="ingredient" type="text" />
+          </div>
+          <div>
+            <p className="inputLabel">Amount:</p>
+            <input id="amount" type="text" />
+          </div>
+          <div>
+            <button className="ingredientButton">Add Ingredient</button>
+          </div>
+          <div>
+            <h4 className="deleteTitle">Delete Ingredient By Ingredient ID</h4>
             <p className="subtitle">Delete Ingredient</p>
             <p className="inputLabel">Ingredient:</p>
-            <input
-              id="deleteIngredient"
-              type="text"
-            />
+            <input id="deleteIngredient" type="text" />
           </div>
           <div>
             <p className="inputLabel">Amount:</p>
             <input id="deleteAmount" type="text" />
           </div>
           <div>
-            <button className="formButton">Delete Ingredient</button>
+            <button className="ingDeleteButton">Delete Ingredient</button>
           </div>
-    </form>
-  </div>);
+        </form>
+      </div>
+    );
   }
 }
 

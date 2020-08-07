@@ -27,12 +27,12 @@ class DeleteForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <h4 className="createFormTitle">Delete A Recipe By ID</h4>
         <div className="idField">
-          <p>ID:</p>
+          <p className="pId">ID:</p>
           <input id="idDeleteInput" type="text" />
         </div>
         <div className="deleteButton">
           <br></br>
-          <button className="formButton">Delete Recipe</button>
+          <button className="deleteButton1">Delete Recipe</button>
         </div>
       </form>
     );

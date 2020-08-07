@@ -79,6 +79,16 @@ class Auth extends Component {
       .catch((err) => console.log(err));
   }
 
+<<<<<<< HEAD
+  render () {
+    console.log("This is from AUth")
+    return (
+      <div>
+        <NavBar isLoggedIn={this.state.isLoggedIn} />
+        <div  className='body'>
+          <Switch>
+            <Route exact path='/signup'
+=======
   render() {
     return (
       <div>
@@ -87,6 +97,7 @@ class Auth extends Component {
           <Switch>
             <Route
               path="/signup"
+>>>>>>> e9a32550e4c167867940300d6fc1f7d113f37362
               render={(props) => {
                 return (
                   <SignUpForm

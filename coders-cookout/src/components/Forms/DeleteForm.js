@@ -10,10 +10,10 @@ class DeleteForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log("oh no I'm deleting");
-    let idDeleteInput = document.getElementById("idDeleteInput").value;
-    console.log(idDeleteInput);
+    let idDeleteRInput = document.getElementById("idDeleteRInput").value;
+    console.log(idDeleteRInput);
 
-    let res = `https://coders-cookout.herokuapp.com/recipes/${idDeleteInput}`;
+    let res = `https://coders-cookout.herokuapp.com/recipes/${idDeleteRInput}`;
     console.log(res);
 
     axios.delete(res).then((res) => {
@@ -30,7 +30,7 @@ class DeleteForm extends Component {
         <br></br>
         <div className="idField">
           <p>ID:</p>
-          <input id="idDeleteInput" type="text" />
+          <input id="idDeleteRInput" type="text" />
         </div>
         <div className="deleteButton">
           <br></br>

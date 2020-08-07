@@ -53,13 +53,14 @@ class CreateForm extends Component {
       })
       .then((Ires) => {
         console.log(Ires.data.ingredients);
+        //alert(`you added a new ingredient ${Ires.data.ingredients[0].ingredient}`)
       });
   }
 
   render() {
     return (
       <div className="createForm">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="recipeDivFix">
           <h4 className="createFormTitle">Add A New Recipe!</h4>
           <div id="createForm">
             <div className="addRecipeDiv">

@@ -1,118 +1,130 @@
-import React, { Component } from 'react'
-import {
-  Route,
-  Switch
-} from 'react-router-dom'
-import axios from 'axios'
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import axios from "axios";
 
-import NavBar from '../NavBar/NavBar'
-import SignUpForm from '../SignUpForm/SignUpForm'
-import LogInForm from '../LogInForm/LogInForm'
-import LogOut from '../LogOut/LogOut'
-import './Auth.css'
+import NavBar from "../NavBar/NavBar";
+import SignUpForm from "../SignUpForm/SignUpForm";
+import LogInForm from "../LogInForm/LogInForm";
+import LogOut from "../LogOut/LogOut";
+import "./Auth.css";
 
 class Auth extends Component {
-  constructor () {
-    super()
+  constructor() {
+    super();
 
     this.state = {
-      email: '',
-      password: '',
-      isLoggedIn: false
-    }
+      email: "",
+      password: "",
+      isLoggedIn: false,
+    };
 
-    this.handleLogOut = this.handleLogOut.bind(this)
-    this.handleInput = this.handleInput.bind(this)
-    this.handleLogIn = this.handleLogIn.bind(this)
-    this.handleSignUp = this.handleSignUp.bind(this)
+    this.handleLogOut = this.handleLogOut.bind(this);
+    this.handleInput = this.handleInput.bind(this);
+    this.handleLogIn = this.handleLogIn.bind(this);
+    this.handleSignUp = this.handleSignUp.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     if (localStorage.token) {
       this.setState({
-        isLoggedIn: true
-      })
+        isLoggedIn: true,
+      });
     } else {
       this.setState({
-        isLoggedIn: false
-      })
+        isLoggedIn: false,
+      });
     }
   }
 
   handleLogOut() {
     this.setState({
-      email: '',
-      password: '',
-      isLoggedIn: false
-    })
-    localStorage.clear()
+      email: "",
+      password: "",
+      isLoggedIn: false,
+    });
+    localStorage.clear();
   }
 
-  handleInput (e) {
+  handleInput(e) {
     this.setState({
-      [e.target.name]: e.target.value
-    })
+      [e.target.name]: e.target.value,
+    });
   }
 
   handleSignUp(e) {
-    e.preventDefault()
-    axios.post('http://localhost:3000/users/signup', {
-      email: this.state.email,
-      password: this.state.password
-    })
-    .then(response => {
-      localStorage.token = response.data.token
-      this.setState({ isLoggedIn: true })
-    })
-    .catch(err => console.log(err))
+    e.preventDefault();
+    axios
+      .post("http://localhost:3000/users/signup", {
+        email: this.state.email,
+        password: this.state.password,
+      })
+      .then((response) => {
+        localStorage.token = response.data.token;
+        this.setState({ isLoggedIn: true });
+      })
+      .catch((err) => console.log(err));
   }
-
 
   handleLogIn(e) {
-    e.preventDefault()
-    axios.post('http://localhost:3000/users/login', {
-      email: this.state.email,
-      password: this.state.password
-    })
-    .then(response => {
-      localStorage.token = response.data.token
-      this.setState({isLoggedIn: true})
-    })
-    .catch(err => console.log(err))
+    e.preventDefault();
+    axios
+      .post("http://localhost:3000/users/login", {
+        email: this.state.email,
+        password: this.state.password,
+      })
+      .then((response) => {
+        localStorage.token = response.data.token;
+        this.setState({ isLoggedIn: true });
+      })
+      .catch((err) => console.log(err));
   }
 
-  render () {
+  render() {
     return (
       <div>
         <NavBar isLoggedIn={this.state.isLoggedIn} />
-        <div className='body'>
+        <div className="body">
           <Switch>
-            <Route path='/signup'
+            <Route
+              path="/signup"
               render={(props) => {
                 return (
-                  <SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
-                )
+                  <SignUpForm
+                    isLoggedIn={this.state.isLoggedIn}
+                    handleInput={this.handleInput}
+                    handleSignUp={this.handleSignUp}
+                  />
+                );
               }}
             />
-            <Route path='/logout'
+            <Route
+              path="/logout"
               render={(props) => {
                 return (
-                  <LogOut isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />
-                )
+                  <LogOut
+                    isLoggedIn={this.state.isLoggedIn}
+                    handleLogOut={this.handleLogOut}
+                  />
+                );
               }}
             />
-            <Route path='/login'
+            <Route
+              path="/login"
               render={(props) => {
                 return (
-                  <LogInForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
-                )
+                  <LogInForm
+                    isLoggedIn={this.state.isLoggedIn}
+                    handleInput={this.handleInput}
+                    handleLogIn={this.handleLogIn}
+                  />
+                );
               }}
-            />     
+            />
           </Switch>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Auth
+export default Auth;

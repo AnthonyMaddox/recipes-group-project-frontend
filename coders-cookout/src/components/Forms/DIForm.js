@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Form.css";
 import axios from "axios";
 
-class DeleteForm extends Component {
+class DIForm extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,19 +25,23 @@ class DeleteForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h4 className="createFormTitle">Delete A Recipe By ID</h4>
+        <h4 className="createFormTitle">Delete An Ingredient From A Recipe</h4>
         <br></br>
         <div className="idField">
-          <p>ID:</p>
-          <input id="idDeleteInput" type="text" />
+          <p>Recipe ID:</p>
+          <input id="idRecipeDeleteInput" type="text" />
+        </div>
+        <div className="idField">
+          <p>Ingredient ID:</p>
+          <input id="idIngredientDeleteInput" type="text" />
         </div>
         <div className="deleteButton">
           <br></br>
-          <button className="formButton">Delete Recipe</button>
+          <button className="formButton">Delete Ingredient</button>
         </div>
       </form>
     );
   }
 }
 
-export default DeleteForm;
+export default DIForm;

@@ -54,7 +54,7 @@ class Auth extends Component {
   handleSignUp(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/users/signup", {
+      .post("https://coders-cookout.herokuapp.com/users/signup", {
         email: this.state.email,
         password: this.state.password,
       })
@@ -68,7 +68,7 @@ class Auth extends Component {
   handleLogIn(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/users/login", {
+      .post("https://coders-cookout.herokuapp.com/users/login", {
         email: this.state.email,
         password: this.state.password,
       })
